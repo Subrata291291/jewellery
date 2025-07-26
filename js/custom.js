@@ -156,59 +156,118 @@ $(document).ready(function() {
   });
 
 
-// countdown----------
-function CountDown(lastDate) {
+// // countdown----------
+// function CountDown(lastDate) {
+//   const selectDay = document.getElementById("day");
+//   const selectHour = document.getElementById("hour");
+//   const selectMinute = document.getElementById("minute");
+//   const selectSecound = document.getElementById("second");
+//   if (selectDay && selectHour && selectMinute && selectSecound) {
+//     let showDate = "";
+//     let showHour = "";
+//     let showMinute = "";
+//     let showSecound = "";
+//     // count Down
+//     const provideDate = new Date(lastDate);
+//     // format date
+//     const year = provideDate.getFullYear();
+//     const month = provideDate.getMonth();
+//     const date = provideDate.getDate();
+//     const hours = provideDate.getHours();
+//     const minutes = provideDate.getMinutes();
+//     const seconds = provideDate.getSeconds();
+
+//     // date calculation logic
+//     const _seconds = 1000;
+//     const _minutes = _seconds * 60;
+//     const _hours = _minutes * 60;
+//     const _date = _hours * 24;
+//     const timer = setInterval(() => {
+//       const now = new Date();
+//       const distance =
+//         new Date(year, month, date, hours, minutes, seconds).getTime() -
+//         now.getTime();
+//       if (distance < 0) {
+//         document.getElementById('countdown-text').innerHTML = "Sale is Closed";
+//         document.getElementById('grab-deal-btn').style.display = "none";
+
+//         const adImage = document.getElementById('advertise-pic');
+//         if (adImage) {
+//           adImage.src = "images/advertise-pic-closed.png";
+//         }
+
+//         clearInterval(timer);
+//         return;
+//       }
+//       showDate = Math.floor(distance / _date);
+//       showMinute = Math.floor((distance % _hours) / _minutes);
+//       showHour = Math.floor((distance % _date) / _hours);
+//       showSecound = Math.floor((distance % _minutes) / _seconds);
+//       selectDay.innerText = showDate < 10 ? `0${showDate}` : showDate;
+//       selectHour.innerText = showHour < 10 ? `0${showHour}` : showHour;
+//       selectMinute.innerText = showMinute < 10 ? `0${showMinute}` : showMinute;
+//       selectSecound.innerText =
+//         showSecound < 10 ? `0${showSecound}` : showSecound;
+//     }, 1000);
+//   }
+// }
+// CountDown("2025-08-15T24:00:00.000000+05:30");
+
+function CountDown(startDateStr) {
+  const startDate = new Date(startDateStr);
+  const endDate = new Date(startDate.getTime() + 24 * 60 * 60 * 1000); // +24 hours
+
   const selectDay = document.getElementById("day");
   const selectHour = document.getElementById("hour");
   const selectMinute = document.getElementById("minute");
-  const selectSecound = document.getElementById("second");
-  if (selectDay && selectHour && selectMinute && selectSecound) {
-    let showDate = "";
-    let showHour = "";
-    let showMinute = "";
-    let showSecound = "";
-    // count Down
-    const provideDate = new Date(lastDate);
-    // format date
-    const year = provideDate.getFullYear();
-    const month = provideDate.getMonth();
-    const date = provideDate.getDate();
-    const hours = provideDate.getHours();
-    const minutes = provideDate.getMinutes();
-    const seconds = provideDate.getSeconds();
+  const selectSecond = document.getElementById("second");
 
-    // date calculation logic
-    const _seconds = 1000;
-    const _minutes = _seconds * 60;
-    const _hours = _minutes * 60;
-    const _date = _hours * 24;
-    const timer = setInterval(() => {
-      const now = new Date();
-      const distance =
-        new Date(year, month, date, hours, minutes, seconds).getTime() -
-        now.getTime();
-      if (distance < 0) {
-        document.getElementById('countdown-text').innerHTML = "Sale is Closed";
-        document.getElementById('grab-deal-btn').style.display = "none";
+  const countdownText = document.getElementById('countdown-text');
+  const grabBtn = document.getElementById('grab-deal-btn');
+  const imageEl = document.getElementById('advertise-pic');
 
-        const adImage = document.getElementById('advertise-pic');
-        if (adImage) {
-          adImage.src = "images/advertise-pic-closed.png";
-        }
+  const _seconds = 1000;
+  const _minutes = _seconds * 60;
+  const _hours = _minutes * 60;
+  const _days = _hours * 24;
 
-        clearInterval(timer);
-        return;
+  const timer = setInterval(() => {
+    const now = new Date();
+
+    if (now < startDate) {
+      countdownText.innerText = "Sale is Coming Soon";
+      grabBtn.style.display = "none";
+      selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
+      return;
+    }
+
+    if (now >= endDate) {
+      countdownText.innerText = "Sale is Closed";
+      grabBtn.style.display = "none";
+      if (imageEl) {
+        imageEl.src = "images/advertise-pic-closed.png";
       }
-      showDate = Math.floor(distance / _date);
-      showMinute = Math.floor((distance % _hours) / _minutes);
-      showHour = Math.floor((distance % _date) / _hours);
-      showSecound = Math.floor((distance % _minutes) / _seconds);
-      selectDay.innerText = showDate < 10 ? `0${showDate}` : showDate;
-      selectHour.innerText = showHour < 10 ? `0${showHour}` : showHour;
-      selectMinute.innerText = showMinute < 10 ? `0${showMinute}` : showMinute;
-      selectSecound.innerText =
-        showSecound < 10 ? `0${showSecound}` : showSecound;
-    }, 1000);
-  }
+      selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
+      clearInterval(timer);
+      return;
+    }
+
+    // Sale is LIVE
+    const remaining = endDate - now;
+    const days = Math.floor(remaining / _days);
+    const hours = Math.floor((remaining % _days) / _hours);
+    const minutes = Math.floor((remaining % _hours) / _minutes);
+    const seconds = Math.floor((remaining % _minutes) / _seconds);
+
+    countdownText.innerText = "Woo! Sale is Live";
+    grabBtn.style.display = "inline-block";
+
+    selectDay.innerText = days < 10 ? "0" + days : days;
+    selectHour.innerText = hours < 10 ? "0" + hours : hours;
+    selectMinute.innerText = minutes < 10 ? "0" + minutes : minutes;
+    selectSecond.innerText = seconds < 10 ? "0" + seconds : seconds;
+  }, 1000);
 }
-CountDown("2025-08-15T24:00:00.000000+05:30");
+// Sale starts on July 26, 2025 at midnight
+CountDown("2025-07-26T00:00:00+05:30");
+
