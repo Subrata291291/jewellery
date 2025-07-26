@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dynalight&display=swap");
 :root {
   --ss-nunito: "Nunito", sans-serif;
   --ss-dynapuff: "DynaPuff", system-ui;
+  --ss-dynalight: "Dynalight", cursive;
   --ss-font500: 500;
   --ss-font600: 600;
   --ss-font700: 700;
@@ -605,6 +607,90 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+.advertise-area {
+  background-color: #FFA1A1;
+  padding: 10rem 0rem;
+  position: relative;
+  z-index: 1;
+}
+.advertise-area .advertise-left h4 {
+  font-size: 4.4rem;
+  font-family: var(--ss-dynalight);
+  color: #BD1F00;
+}
+.advertise-area .advertise-left h3 {
+  font-size: 4.7rem;
+  font-weight: 900;
+  margin: 0.5rem 0rem 1rem;
+}
+.advertise-area .advertise-left p {
+  margin-bottom: 3rem;
+}
+.advertise-area .advertise-right img {
+  display: block;
+  margin-left: auto;
+}
+.advertise-area .offer-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+}
+.advertise-area .countdown-section {
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset;
+  gap: 2.3rem;
+  margin-bottom: 4rem;
+}
+.advertise-area .countdown-items .number {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  font-size: 2rem;
+  font-weight: 700;
+  background: #ffffff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.advertise-area .countdown-items .text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1d1d1d;
+}
+
+.advertise-area::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  background-image: url(../images/header_shape.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  z-index: -1;
+}
+
+.advertise-area::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  background-image: url(../images/header_shape.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
 @media (min-width: 1700px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1580px;
@@ -710,6 +796,15 @@ a {
   .category-area .category-left ul li a {
     font-size: 1.5rem;
   }
+  .advertise-area {
+    padding: 5rem 0rem;
+  }
+  .advertise-area .advertise-left h3 {
+    font-size: 3rem;
+  }
+  .advertise-area .countdown-section {
+    gap: 1.2rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .common_btn {
@@ -812,5 +907,21 @@ a {
   }
   .brand-area .brand-slider .brand-pic img {
     padding: 1rem;
+  }
+  .advertise-area {
+    padding: 5rem 0rem;
+  }
+  .advertise-area .countdown-section {
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  .advertise-area .advertise-left {
+    margin-top: 3rem;
+  }
+  .advertise-area::before {
+    top: -5px;
+  }
+  .advertise-area::after {
+    bottom: -5px;
   }
 }/*# sourceMappingURL=main.css.map */
