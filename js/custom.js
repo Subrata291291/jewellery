@@ -121,6 +121,58 @@
     ]
   });
 
+  // Review slider js
+   $(".review-slider").slick({
+    dots: false,
+    infinite: true,
+    arrows: true,
+    autoplay: false,
+    centerMode: true,
+    // centerPadding: '60px',
+    fade: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [{
+        breakpoint: 1399,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          dots: false,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          dots: false,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          centerMode: false,
+          arrows: false,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
     
 // Product tab area
 $(document).ready(function() {
