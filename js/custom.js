@@ -82,20 +82,20 @@
 });
 
    // Class slider js
-   $(".review_slider").slick({
-    dots: true,
+   $(".brand-slider").slick({
+    dots: false,
     infinite: true,
-    arrows: false,
+    arrows: true,
     autoplay: false,
     fade: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 8,
+    slidesToScroll: 2,
     responsive: [{
         breakpoint: 1399,
         settings: {
           dots: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 6,
+          slidesToScroll: 2,
           infinite: true,
         }
       },
@@ -103,8 +103,8 @@
         breakpoint: 991,
         settings: {
           dots: false,
-          arrows: false,
-          slidesToShow: 1,
+          arrows: true,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
         }
@@ -112,8 +112,8 @@
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1,
-          dots: false,
+          slidesToShow: 3,
+          dots: true,
           arrows: false,
           slidesToScroll: 1
         }
