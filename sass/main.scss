@@ -125,6 +125,9 @@ a {
 .slick-dots li button:before {
     font-size: 2.5rem !important;
 }
+.slick-track {
+    margin: 0.5rem 0rem;
+}
 .title-box {
     h3 {
         font-family: var(--ss-dynapuff);
@@ -142,6 +145,13 @@ a {
     .topbar-left {
         ul {
             gap: 2rem;
+            li {
+                p{
+                    span {
+                        vertical-align: middle;
+                    }
+                }
+            }
         }
     }
     .topbar-right {
@@ -192,6 +202,7 @@ a {
         justify-content: center;
         font-size: 1.4rem;
         border-radius: 5rem;
+        z-index: 1;
     }
     .navbar-expand-md {
         .navbar-nav {
@@ -292,7 +303,7 @@ a {
 .shrink {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     transition-delay: 0.09s;
     transition: 0.7s;
@@ -461,6 +472,55 @@ a {
     }
 }
 
+.deals-area {
+    .deal-box {
+        padding: 3rem;
+        border-radius: 2rem;
+        background-image: url('../images/deal-bg.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: rgba(185, 53, 112, 0.85);
+        color: #fff;
+        p {
+            font-weight: 400;
+            color: #fff;
+        }
+        h4 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1rem 0rem 2rem;
+        }
+        h5 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .deal-pic {
+            margin-top: 4rem;
+            text-align: center;
+            z-index: 1;
+            .deal-shape {
+                left: -2%;
+                z-index: -1;
+            }
+        }
+    }
+    .deal-box1 {
+        background-color: #E98838;
+    }
+    .deal-box2 {
+        background-color: #85B538;
+        .deal-shape {
+            right: 0%;
+            left: inherit !important;
+        }
+    }
+    .deal-box3 {
+        background-color: #4BA8D9;
+    }
+}
+
 
 
 
@@ -525,6 +585,19 @@ a {
     .shipping-area {
         .shipping-box {
             padding: 4rem 1rem;
+        }
+    }
+    .deals-area {
+        .row {
+            row-gap: 1.5rem;
+        }
+        .deal-box {
+            h4 {
+                font-size: 2.4rem;
+            }
+            h5 {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -706,6 +779,12 @@ a {
                     margin-bottom: 1rem;
                 }
             }
+        }
+    }
+    .deals-area {
+        margin-top: 3rem;
+        .deal-box {
+            padding: 2rem;
         }
     }
 }

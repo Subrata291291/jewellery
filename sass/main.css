@@ -155,6 +155,10 @@ a {
   font-size: 2.5rem !important;
 }
 
+.slick-track {
+  margin: 0.5rem 0rem;
+}
+
 .title-box h3 {
   font-family: var(--ss-dynapuff);
   font-size: 3rem;
@@ -170,6 +174,9 @@ a {
 }
 .topbar-area .topbar-left ul {
   gap: 2rem;
+}
+.topbar-area .topbar-left ul li p span {
+  vertical-align: middle;
 }
 .topbar-area .topbar-right ul {
   gap: 1rem;
@@ -215,6 +222,7 @@ a {
   justify-content: center;
   font-size: 1.4rem;
   border-radius: 5rem;
+  z-index: 1;
 }
 .header-area .navbar-expand-md .navbar-nav {
   gap: 1rem;
@@ -309,7 +317,7 @@ a {
 .shrink {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   transition-delay: 0.09s;
   transition: 0.7s;
@@ -444,6 +452,53 @@ a {
   text-decoration: line-through;
 }
 
+.deals-area .deal-box {
+  padding: 3rem;
+  border-radius: 2rem;
+  background-image: url("../images/deal-bg.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: rgba(185, 53, 112, 0.85);
+  color: #fff;
+}
+.deals-area .deal-box p {
+  font-weight: 400;
+  color: #fff;
+}
+.deals-area .deal-box h4 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 1rem 0rem 2rem;
+}
+.deals-area .deal-box h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.deals-area .deal-box .deal-pic {
+  margin-top: 4rem;
+  text-align: center;
+  z-index: 1;
+}
+.deals-area .deal-box .deal-pic .deal-shape {
+  left: -2%;
+  z-index: -1;
+}
+.deals-area .deal-box1 {
+  background-color: #E98838;
+}
+.deals-area .deal-box2 {
+  background-color: #85B538;
+}
+.deals-area .deal-box2 .deal-shape {
+  right: 0%;
+  left: inherit !important;
+}
+.deals-area .deal-box3 {
+  background-color: #4BA8D9;
+}
+
 @media (max-width: 1399px) {
   .header-area .navbar-expand-md .navbar-nav .nav-link {
     font-size: 1.3rem;
@@ -480,6 +535,15 @@ a {
   }
   .shipping-area .shipping-box {
     padding: 4rem 1rem;
+  }
+  .deals-area .row {
+    row-gap: 1.5rem;
+  }
+  .deals-area .deal-box h4 {
+    font-size: 2.4rem;
+  }
+  .deals-area .deal-box h5 {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -602,5 +666,11 @@ a {
   }
   .best-seller-area .best-seller-slider .slider .product-box {
     margin-bottom: 1rem;
+  }
+  .deals-area {
+    margin-top: 3rem;
+  }
+  .deals-area .deal-box {
+    padding: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
