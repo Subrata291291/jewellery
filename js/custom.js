@@ -327,15 +327,15 @@ CountDown("2025-07-28T24:00:00.000000+05:30");
 // CountDown("2025-07-27T00:00:00+05:30");
 
 //Inspect mode off
-// document.addEventListener('contextmenu', function (e) {
-//     e.preventDefault();
-//   });
-//   document.onkeydown = function (e) {
-//     if (
-//       e.keyCode === 123 || // F12
-//       (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I or J
-//       (e.ctrlKey && e.keyCode === 85) // Ctrl+U
-//     ) {
-//       return false;
-//     }
-//   };
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+  document.onkeydown = function (e) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I or J
+      (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+    ) {
+      return false;
+    }
+  };
