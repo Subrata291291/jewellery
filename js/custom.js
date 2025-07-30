@@ -46,7 +46,7 @@
   centerMode: false,
   centerPadding: '0px',
   arrows: true,
-  autoplay: false,
+  autoplay: true,
   fade: false,
   slidesToShow: 5,
   slidesToScroll: 2,
@@ -86,7 +86,7 @@
     dots: false,
     infinite: true,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     fade: false,
     slidesToShow: 8,
     slidesToScroll: 2,
@@ -126,7 +126,7 @@
     dots: false,
     infinite: true,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     centerMode: true,
     // centerPadding: '60px',
     fade: false,
@@ -176,10 +176,10 @@
     
 // Product tab area
 $(document).ready(function() {
-  $('.work-area ul li').click(function() {
+  $('.category-area ul li').click(function() {
     var tab_id = $(this).attr('data-tab');
-    $('.work-area ul li').removeClass('current');
-    $('.work-area .tab-content').removeClass('current');
+    $('.category-area ul li').removeClass('current');
+    $('.category-area .tab-content').removeClass('current');
     $(this).addClass('current');
     $("#" + tab_id).addClass('current');
   })
@@ -208,118 +208,134 @@ $(document).ready(function() {
   });
 
 
-// // countdown----------
-// function CountDown(lastDate) {
-//   const selectDay = document.getElementById("day");
-//   const selectHour = document.getElementById("hour");
-//   const selectMinute = document.getElementById("minute");
-//   const selectSecound = document.getElementById("second");
-//   if (selectDay && selectHour && selectMinute && selectSecound) {
-//     let showDate = "";
-//     let showHour = "";
-//     let showMinute = "";
-//     let showSecound = "";
-//     // count Down
-//     const provideDate = new Date(lastDate);
-//     // format date
-//     const year = provideDate.getFullYear();
-//     const month = provideDate.getMonth();
-//     const date = provideDate.getDate();
-//     const hours = provideDate.getHours();
-//     const minutes = provideDate.getMinutes();
-//     const seconds = provideDate.getSeconds();
-
-//     // date calculation logic
-//     const _seconds = 1000;
-//     const _minutes = _seconds * 60;
-//     const _hours = _minutes * 60;
-//     const _date = _hours * 24;
-//     const timer = setInterval(() => {
-//       const now = new Date();
-//       const distance =
-//         new Date(year, month, date, hours, minutes, seconds).getTime() -
-//         now.getTime();
-//       if (distance < 0) {
-//         document.getElementById('countdown-text').innerHTML = "Sale is Closed";
-//         document.getElementById('grab-deal-btn').style.display = "none";
-
-//         const adImage = document.getElementById('advertise-pic');
-//         if (adImage) {
-//           adImage.src = "images/advertise-pic-closed.png";
-//         }
-
-//         clearInterval(timer);
-//         return;
-//       }
-//       showDate = Math.floor(distance / _date);
-//       showMinute = Math.floor((distance % _hours) / _minutes);
-//       showHour = Math.floor((distance % _date) / _hours);
-//       showSecound = Math.floor((distance % _minutes) / _seconds);
-//       selectDay.innerText = showDate < 10 ? `0${showDate}` : showDate;
-//       selectHour.innerText = showHour < 10 ? `0${showHour}` : showHour;
-//       selectMinute.innerText = showMinute < 10 ? `0${showMinute}` : showMinute;
-//       selectSecound.innerText =
-//         showSecound < 10 ? `0${showSecound}` : showSecound;
-//     }, 1000);
-//   }
-// }
-// CountDown("2025-08-15T24:00:00.000000+05:30");
-
-function CountDown(startDateStr) {
-  const startDate = new Date(startDateStr);
-  const endDate = new Date(startDate.getTime() + 24 * 60 * 60 * 1000); // +24 hours
-
+// Offer countdown----------
+function CountDown(lastDate) {
   const selectDay = document.getElementById("day");
   const selectHour = document.getElementById("hour");
   const selectMinute = document.getElementById("minute");
-  const selectSecond = document.getElementById("second");
+  const selectSecound = document.getElementById("second");
+  if (selectDay && selectHour && selectMinute && selectSecound) {
+    let showDate = "";
+    let showHour = "";
+    let showMinute = "";
+    let showSecound = "";
+    // count Down
+    const provideDate = new Date(lastDate);
+    // format date
+    const year = provideDate.getFullYear();
+    const month = provideDate.getMonth();
+    const date = provideDate.getDate();
+    const hours = provideDate.getHours();
+    const minutes = provideDate.getMinutes();
+    const seconds = provideDate.getSeconds();
 
-  const countdownText = document.getElementById('countdown-text');
-  const grabBtn = document.getElementById('grab-deal-btn');
-  const imageEl = document.getElementById('advertise-pic');
+    // date calculation logic
+    const _seconds = 1000;
+    const _minutes = _seconds * 60;
+    const _hours = _minutes * 60;
+    const _date = _hours * 24;
+    const timer = setInterval(() => {
+      const now = new Date();
+      const distance =
+        new Date(year, month, date, hours, minutes, seconds).getTime() -
+        now.getTime();
+      if (distance < 0) {
+        document.getElementById('countdown-text').innerHTML = "Sale is Closed";
+        document.getElementById('grab-deal-btn').style.display = "none";
 
-  const _seconds = 1000;
-  const _minutes = _seconds * 60;
-  const _hours = _minutes * 60;
-  const _days = _hours * 24;
+        const adImage = document.getElementById('advertise-pic');
+        if (adImage) {
+          adImage.src = "images/advertise-pic-closed.png";
+        }
 
-  const timer = setInterval(() => {
-    const now = new Date();
-
-    if (now < startDate) {
-      countdownText.innerText = "Sale is Coming Soon";
-      grabBtn.style.display = "none";
-      selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
-      return;
-    }
-
-    if (now >= endDate) {
-      countdownText.innerText = "Sale is Closed";
-      grabBtn.style.display = "none";
-      if (imageEl) {
-        imageEl.src = "images/advertise-pic-closed.png";
+        clearInterval(timer);
+        return;
       }
-      selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
-      clearInterval(timer);
-      return;
-    }
-
-    // Sale is LIVE
-    const remaining = endDate - now;
-    const days = Math.floor(remaining / _days);
-    const hours = Math.floor((remaining % _days) / _hours);
-    const minutes = Math.floor((remaining % _hours) / _minutes);
-    const seconds = Math.floor((remaining % _minutes) / _seconds);
-
-    countdownText.innerText = "Woo! Sale is Live";
-    grabBtn.style.display = "inline-block";
-
-    selectDay.innerText = days < 10 ? "0" + days : days;
-    selectHour.innerText = hours < 10 ? "0" + hours : hours;
-    selectMinute.innerText = minutes < 10 ? "0" + minutes : minutes;
-    selectSecond.innerText = seconds < 10 ? "0" + seconds : seconds;
-  }, 1000);
+      showDate = Math.floor(distance / _date);
+      showMinute = Math.floor((distance % _hours) / _minutes);
+      showHour = Math.floor((distance % _date) / _hours);
+      showSecound = Math.floor((distance % _minutes) / _seconds);
+      selectDay.innerText = showDate < 10 ? `0${showDate}` : showDate;
+      selectHour.innerText = showHour < 10 ? `0${showHour}` : showHour;
+      selectMinute.innerText = showMinute < 10 ? `0${showMinute}` : showMinute;
+      selectSecound.innerText =
+        showSecound < 10 ? `0${showSecound}` : showSecound;
+    }, 1000);
+  }
 }
-// Sale starts on July 26, 2025 at midnight
-CountDown("2025-07-26T00:00:00+05:30");
+CountDown("2025-07-28T24:00:00.000000+05:30");
 
+
+//Offer Countdown for One day Timer
+
+// function CountDown(startDateStr) {
+//   const startDate = new Date(startDateStr);
+//   const endDate = new Date(startDate.getTime() + 24 * 60 * 60 * 1000); // +24 hours
+
+//   const selectDay = document.getElementById("day");
+//   const selectHour = document.getElementById("hour");
+//   const selectMinute = document.getElementById("minute");
+//   const selectSecond = document.getElementById("second");
+
+//   const countdownText = document.getElementById('countdown-text');
+//   const grabBtn = document.getElementById('grab-deal-btn');
+//   const imageEl = document.getElementById('advertise-pic');
+
+//   const _seconds = 1000;
+//   const _minutes = _seconds * 60;
+//   const _hours = _minutes * 60;
+//   const _days = _hours * 24;
+
+//   const timer = setInterval(() => {
+//     const now = new Date();
+
+//     if (now < startDate) {
+//       countdownText.innerText = "Sale is Coming Soon";
+//       grabBtn.style.display = "none";
+//       selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
+//       return;
+//     }
+
+//     if (now >= endDate) {
+//       countdownText.innerText = "Sale is Closed";
+//       grabBtn.style.display = "none";
+//       if (imageEl) {
+//         imageEl.src = "images/advertise-pic-closed.png";
+//       }
+//       selectDay.innerText = selectHour.innerText = selectMinute.innerText = selectSecond.innerText = "00";
+//       clearInterval(timer);
+//       return;
+//     }
+
+//     // Sale is LIVE
+//     const remaining = endDate - now;
+//     const days = Math.floor(remaining / _days);
+//     const hours = Math.floor((remaining % _days) / _hours);
+//     const minutes = Math.floor((remaining % _hours) / _minutes);
+//     const seconds = Math.floor((remaining % _minutes) / _seconds);
+
+//     countdownText.innerText = "Woo! Sale is Live";
+//     grabBtn.style.display = "inline-block";
+
+//     selectDay.innerText = days < 10 ? "0" + days : days;
+//     selectHour.innerText = hours < 10 ? "0" + hours : hours;
+//     selectMinute.innerText = minutes < 10 ? "0" + minutes : minutes;
+//     selectSecond.innerText = seconds < 10 ? "0" + seconds : seconds;
+//   }, 1000);
+// }
+// // Sale starts on July 26, 2025 at midnight
+// CountDown("2025-07-27T00:00:00+05:30");
+
+//Inspect mode off
+// document.addEventListener('contextmenu', function (e) {
+//     e.preventDefault();
+//   });
+//   document.onkeydown = function (e) {
+//     if (
+//       e.keyCode === 123 || // F12
+//       (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I or J
+//       (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+//     ) {
+//       return false;
+//     }
+//   };
