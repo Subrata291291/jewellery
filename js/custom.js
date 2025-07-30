@@ -38,6 +38,7 @@
     }
   ]
 });
+// Product slider js
 
    // Class slider js
  $(".best-seller-slider").slick({
@@ -80,6 +81,7 @@
     }
   ]
 });
+// Class slider js
 
    // Class slider js
    $(".brand-slider").slick({
@@ -120,6 +122,7 @@
       }
     ]
   });
+  // Class slider js
 
   // Review slider js
    $(".review-slider").slick({
@@ -173,6 +176,60 @@
       }
     ]
   });
+  // Review slider js
+
+  //Single product slider
+  $(document).on('ready', function() {
+  $('.product-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    fade: true,
+    infinite: true,
+    asNavFor: '.center'
+  });
+  $('.center').slick({
+    slidesToShow: 4,
+    arrows: false,
+    autoplay: true,
+    infinite: true,
+    slidesToScroll: 1,
+    asNavFor: '.regular',
+    dots: false,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 1399,
+      settings: {
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        dots: false,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+        dots: false,
+        arrows: false,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
+});
+//Single product slider
     
 // Product tab area
 $(document).ready(function() {
@@ -184,8 +241,9 @@ $(document).ready(function() {
     $("#" + tab_id).addClass('current');
   })
 });
+// Product tab area
 
- // Shrink header 
+// Shrink header 
   $(document).ready(function() {
     $(window).scroll(function() {
       if ($(document).scrollTop() > 270) {
@@ -195,6 +253,7 @@ $(document).ready(function() {
       }
     });
   });
+// Shrink header 
 
 // Password Show 
   $(".toggle-password").click(function() {
@@ -206,7 +265,7 @@ $(document).ready(function() {
       input.attr("type", "password");
     }
   });
-
+  // Password Show 
 
 // Offer countdown----------
 function CountDown(lastDate) {
@@ -245,7 +304,7 @@ function CountDown(lastDate) {
 
         const adImage = document.getElementById('advertise-pic');
         if (adImage) {
-          adImage.src = "images/advertise-pic-closed.png";
+          adImage.src = "http://localhost/paw-crush/wp-content/uploads/2025/07/advertise-pic-closed.png";
         }
 
         clearInterval(timer);
@@ -263,7 +322,9 @@ function CountDown(lastDate) {
     }, 1000);
   }
 }
-CountDown("2025-07-28T24:00:00.000000+05:30");
+CountDown("2025-07-31T24:00:00.000000+05:30");
+// Offer countdown----------
+
 
 
 //Offer Countdown for One day Timer
@@ -327,15 +388,108 @@ CountDown("2025-07-28T24:00:00.000000+05:30");
 // CountDown("2025-07-27T00:00:00+05:30");
 
 //Inspect mode off
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
+// document.addEventListener('contextmenu', function (e) {
+//     e.preventDefault();
+//   });
+//   document.onkeydown = function (e) {
+//     if (
+//       e.keyCode === 123 || // F12
+//       (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I or J
+//       (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+//     ) {
+//       return false;
+//     }
+//   };
+
+//Header menu class add
+$(function(){
+    $(".navbar-nav li").addClass("nav-item");
+    $(".navbar-nav li a").addClass("nav-link");
+    $(".menu-item-has-children a").addClass("dropdown-toggle");
+    $(".menu-item-has-children ul").addClass("dropdown-menu shadow");
+    $(".menu-item-has-children").addClass("position-relative");
+    $(".dropdown a").addClass("dropdown-toggle");
+    $(".menu-item-has-children .nav-link").attr('data-bs-toggle', 'dropdown');
+    $(".sub-menu li").removeClass("nav-item");
+    $(".sub-menu li a").removeClass("dropdown-toggle");
+    $(".sub-menu li a").removeAttr('data-bs-toggle', 'dropdown');
+    $(".sub-menu li a").removeClass("nav-link");
+    $(".sub-menu li a").addClass("dropdown-item");
   });
-  document.onkeydown = function (e) {
-    if (
-      e.keyCode === 123 || // F12
-      (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I or J
-      (e.ctrlKey && e.keyCode === 85) // Ctrl+U
-    ) {
-      return false;
+//Header menu class add
+
+ // About Counter function
+        jQuery(function($) {
+        // Counter function
+        function animateCounter($el) {
+          const target = $el.text();
+          const decimals = (target.split(".")[1] || "").length;
+
+          $el.prop('Counter', 0).animate({
+            Counter: target
+          }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+              $el.text(parseFloat(now).toFixed(decimals));
+            }
+          });
+        }
+
+        // Observe each .stat-number element
+        const counters = document.querySelectorAll('.stat-number');
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const $el = $(entry.target);
+                if (!$el.hasClass('counted')) {
+                  $el.addClass('counted');
+                  animateCounter($el);
+                  observer.unobserve(entry.target); // Only once
+                }
+              }
+            });
+          }, { threshold: 0.6 });
+
+          counters.forEach(counter => observer.observe(counter));
+        } else {
+          // Fallback: animate all on load
+          $('.stat-number').each(function () {
+            animateCounter($(this));
+          });
+        }
+      });
+ // About Counter function
+
+  // Preloader JS function
+    // Wait until the full page has loaded
+  window.addEventListener('load', function () {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+      // Optionally add a fade-out animation
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+
+      // Remove it from the DOM after fade out
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
     }
-  };
+  });
+  // Preloader JS function
+
+// Gallery JS function
+  jQuery(function($) {
+    $('.grid-wrapper .gallery-box').each(function(index) {
+      if (index === 0 || index === 3) {
+        $(this).addClass('tall');
+      } else if (index === 2) {
+        $(this).addClass('wide');
+      }
+      else if (index === 5) {
+        $(this).addClass('big');
+      }
+    });
+  });
+  // Gallery JS function

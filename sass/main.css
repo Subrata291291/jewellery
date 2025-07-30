@@ -181,10 +181,15 @@ a {
 .product-box {
   padding: 2rem;
   border-radius: 0.5rem;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.product-box .star-rating-wrapper {
+  justify-content: left;
 }
 .product-box .product-pic img {
   width: 100%;
+  height: auto;
 }
 .product-box .product-pic span {
   font-size: 1.2rem;
@@ -214,6 +219,14 @@ a {
   visibility: hidden;
   transition: 0.3s;
 }
+.product-box .rating-box {
+  margin: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.product-box .rating-box .star-rating-wrapper {
+  margin: 1rem 0rem;
+}
 .product-box .rating-box ul li {
   margin: 1rem 0rem;
 }
@@ -228,6 +241,7 @@ a {
 }
 .product-box p {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   color: #BD1F00;
@@ -235,9 +249,7 @@ a {
   font-weight: 700;
 }
 .product-box p span {
-  color: #999999;
-  font-size: 1.4rem;
-  text-decoration: line-through;
+  font-size: 1.8rem;
 }
 
 .product-box:hover .add-cart-btn a {
@@ -325,6 +337,7 @@ a {
 }
 .header-area .navbar-expand-md .navbar-nav .dropdown-menu {
   border-radius: 0rem;
+  padding: 0;
 }
 .header-area .navbar-expand-md .navbar-nav .dropdown-menu li a {
   padding: 0.8rem 4rem;
@@ -868,6 +881,7 @@ a {
   position: relative;
   padding-left: 5rem;
   letter-spacing: 2px;
+  margin-bottom: 4rem;
 }
 .common-banner h3::before {
   content: "";
@@ -883,7 +897,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   max-width: 60rem;
-  line-height: 9rem;
+  line-height: 6rem;
   margin: 2rem 0rem;
 }
 .common-banner h1 span {
@@ -965,16 +979,49 @@ a {
 .shop-area .pagination-wrapper ul li button:focus {
   box-shadow: none;
 }
-.shop-area .shop-right select {
+.shop-area .shop_right .row {
+  row-gap: 2rem;
+}
+.shop-area .shop_right select {
   font-size: 1.4rem;
   border-radius: 0rem;
   padding: 1rem 3rem 1rem 2rem;
   outline: none;
 }
-.shop-area .shop-right select:focus {
+.shop-area .shop_right select:focus {
   box-shadow: none;
 }
+.shop-area .widgettitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.shop-area .widget-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.shop-area .wp-block-woocommerce-product-filter-rating {
+  margin: 3rem 0rem;
+}
+.shop-area .product-box {
+  text-align: center;
+}
+.shop-area .product-box p {
+  justify-content: center;
+}
+.shop-area .product-box .star-rating-wrapper {
+  justify-content: center;
+}
 
+/*Single Product Page*/
+.product_details_left .slick-slide {
+  margin: 0rem 0.5rem;
+}
+
+/*Single Product Page*/
+/*Contact Page*/
 .contact-area .contact-area-left h4 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -1073,13 +1120,17 @@ a {
   border-bottom: 1px solid #343434;
   padding: 1rem 0rem;
   color: #000;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   border-radius: 0rem;
   outline: none;
 }
+.contact-area .contact-area-right .contact-form .common_btn {
+  margin-bottom: 0rem;
+}
 .contact-area .contact-area-right .contact-form textarea {
   width: 100%;
+  max-height: 10rem;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #343434;
@@ -1093,7 +1144,8 @@ a {
   width: 100%;
 }
 
-/*About Area*/
+/*Contact Page*/
+/*About Page*/
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -1198,17 +1250,69 @@ a {
   text-transform: capitalize;
   margin-bottom: 6rem;
 }
-.gallery-area .gallery-box a {
-  overflow: hidden;
-}
 .gallery-area .gallery-box a img {
   width: 100%;
-  margin-bottom: 1.5rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.gallery-area .grid-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+.gallery-area .grid-wrapper .wide {
+  grid-column: span 2;
+}
+.gallery-area .grid-wrapper .tall {
+  grid-row: span 2;
+}
+.gallery-area .grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-area .grid-wrapper .default {
+  grid-column: auto;
 }
 
+/*About Page*/
 @media (min-width: 1700px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1580px;
+  }
+  p {
+    font-size: 2rem !important;
+  }
+  .dgwt-wcas-search-input {
+    font-size: 1.8rem !important;
+  }
+  .header-area .header-right .form-area form input {
+    max-width: 100%;
+  }
+  .product-box .pro-title {
+    font-size: 2.3rem;
+  }
+  .product-box p span {
+    font-size: 2rem;
+  }
+  .contact-area .contact-area-left ul li .mail::before {
+    font-size: 1.8rem;
+  }
+  .contact-area .contact-area-left ul li .address::before {
+    font-size: 1.8rem;
+  }
+  .contact-area .contact-area-right .contact-form input {
+    font-size: 1.8rem;
+  }
+  .footer-area .footer-menu ul li a {
+    font-size: 2rem;
+  }
+  .header-area .navbar-expand-md .navbar-nav .nav-link {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 1399px) {
@@ -1256,6 +1360,12 @@ a {
 @media screen and (max-width: 991px) {
   .p-70 {
     padding: 4rem 0rem;
+  }
+  .header-area .dropdown-item {
+    font-size: 1.3rem;
+  }
+  .header-area .navbar-expand-md .navbar-nav .dropdown-menu li a {
+    padding: 0.8rem 2rem;
   }
   .common-banner h1 {
     font-size: 4rem;
@@ -1355,8 +1465,48 @@ a {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
+  .about-area .about-left h3 {
+    font-size: 3rem;
+  }
+  .about-area .about-left .desc {
+    font-size: 1.6rem;
+  }
+  .about-area .about-left .about-content {
+    position: relative;
+  }
+  .about-area .about-left .about-content li p {
+    font-size: 1.6rem;
+    padding-left: 3rem;
+  }
+  .about-area .about-left .about-content li p span {
+    position: absolute;
+    left: 0;
+  }
+  .awards-area .award-box h2 {
+    font-size: 4rem;
+  }
+  .awards-area .award-box p {
+    font-size: 1.6rem;
+  }
+  .gallery-area .title-box h3 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
 }
 @media screen and (max-width: 767px) {
+  .product-box {
+    padding: 1rem;
+  }
+  .product-box .pro-title {
+    font-size: 1.5rem;
+  }
+  .product-box p {
+    gap: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .product-box p span {
+    font-size: 1.4rem;
+  }
   .common_btn {
     padding: 1rem 1rem;
     font-size: 1.3rem;
@@ -1516,14 +1666,17 @@ a {
     text-align: center;
   }
   .common-banner h1 {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 2rem;
   }
   .common-banner h1 span {
     color: var(--ss-secondary);
   }
   .common-banner h3 {
+    font-size: 1.4rem;
+    letter-spacing: 0rem;
     padding-left: 0rem;
+    margin-bottom: 0rem;
   }
   .common-banner h3::before {
     display: none;
@@ -1535,5 +1688,27 @@ a {
   .contact-area .contact-area-right h4 {
     font-size: 2rem;
     margin-bottom: 1rem;
+  }
+  .about-area .about-left {
+    margin-top: 2rem;
+  }
+  .about-area .about-left h3 {
+    font-size: 2.5rem;
+  }
+  .about-area .about-left .about-content li p {
+    padding-left: 2.5rem;
+  }
+  .awards-area .row {
+    row-gap: 2rem;
+  }
+  .awards-area .row .award-box {
+    border: 1px dotted;
+    padding: 1rem;
+  }
+  .awards-area .row .award-box h2 {
+    font-size: 3rem;
+  }
+  .gallery-area .title-box h3 {
+    font-size: 2.2rem;
   }
 }/*# sourceMappingURL=main.css.map */
