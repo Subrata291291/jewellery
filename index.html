@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Paw Crush</title>
+    <title>Jewellery</title>
     <meta name="description" content="Paw Crush">
     <meta name="robots" content="noindex, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +16,10 @@
     <!--font aswome -->
     <!-- Stylesheets -->
     <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" type="text/css" href="sass/swiper.css">
     <!-- Stylesheets -->
      <!--Slick css-->
-    <link rel="stylesheet" type="text/css" href="sass/slick.css">
-    <link rel="stylesheet" type="text/css" href="sass/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!--Slick css-->
     <!--aos css-->
     <link rel="stylesheet" type="text/css" href="sass/aos.css">
@@ -30,175 +30,807 @@
 
   </head>
   <body>
-    <!--header area-->
+    <!--Topbar area-->
     <section class="topbar-area">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-8 col-lg-8 col-xl-6 d-none d-md-block">
-            <marquee behavior="" direction="">
-              <div class="topbar-left">
-                <ul class="d-md-flex">
-                  <li>
-                    <p><span><i class="fa-regular fa-clock"></i></span> Opening Time : 9 am - 10 pm (Monday- Saturday)</p>
-                  </li>
-                  <li>
-                    <p><span><i class="fa-solid fa-square-phone"></i></span> 9239550041</p>
-                  </li>
-                  <li>
-                    <p><span><i class="fa-solid fa-envelope"></i></span> pawcrush2023@gmail.com</p>
-                  </li>
-                </ul>
+          <div class="col-12 col-md-4">
+            <div class="topbar-left">
+              <p>Welcome to Worldwide Electronics Store</p>
             </div>
-            </marquee>
           </div>
-          <div class="col-md-4 col-lg-4 col-xl-6">
+          <div class="col-12 col-md-8">
             <div class="topbar-right">
               <ul class="d-flex">
                 <li>
-                  <p>Folow us on:</p>
+                  <a href="#">
+                    <span><i class="fa-regular fa-bag-shopping"></i></span> Shop
+                  </a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="#">
+                    <span><i class="fa-regular fa-user"></i></span> My Account
+                  </a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="#">
+                    <span><i class="fa-regular fa-truck"></i></span> Track Order
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Topbar area-->
+    <!--Header area-->
+    <section class="header-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-5 col-md-3 order-1 order-md-1">
+            <div class="header-left">
+              <div class="logo">
+                <img src="images/logo.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 order-3 order-md-2">
+            <div class="header-middle">
+              <form action="">
+                <div class="form-area d-flex">
+                  <div class="form-control">
+                    <input type="text" placeholder="Search for products...">
+                  </div>
+                  <div class="form-control d-none d-lg-block">
+                    <select name="">
+                      <option value="">All Categories</option>
+                      <option value="">All Categories</option>
+                      <option value="">All Categories</option>
+                      <option value="">All Categories</option>
+                    </select>
+                  </div>
+                  <button type="button" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-7 col-md-3 order-2 order-md-3">
+            <div class="header-right">
+              <ul class="d-flex">
+                <li>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
                 </li>
                 <li>
-                  <ul class="d-flex social-icons">
-                    <li>
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-regular fa-user"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center mt-5 position-relative">
+          <div class="col-8 col-md-3">
+            <div class="category-area">
+              <div class="dropdown cat-dropdown">
+                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span><i class="fa-solid fa-bars"></i></span> All Category
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><span><i class="fa-solid fa-gem"></i></span> Bracelet</a></li>
+                  <li><a class="dropdown-item" href="#"><span><i class="fa-solid fa-gem"></i></span> Bracelet</a></li>
+                  <li><a class="dropdown-item" href="#"><span><i class="fa-solid fa-gem"></i></span> Bracelet</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-md-9 d-none d-md-block">
+            <div class="menu-area d-flex">
+              <ul class="d-flex mx-auto ms-md-auto me-md-0 mx-xl-auto">
+                <li>
+                  <a aria-current="page" href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Trending Style</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Shop
+                  </a>
+                  <ul class="dropdown-menu shadow d-flex" aria-labelledby="navbarDropdown">
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro1.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro9.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro2.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
+                    </li>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro3.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
+                    </li>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro4.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
+                    </li>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro5.png" alt="">
+                        <h3>Pearls</h3>
+                      </a>
+                    </li>
+                    <li class="text-center">
+                      <a href="#">
+                        <img src="images/pro7.jpg" alt="">
+                        <h3>Pearls</h3>
+                      </a>
                     </li>
                   </ul>
                 </li>
+                <li>
+                  <a href="#">Coupon Codes</a>
+                </li>
+              </ul>
+              <ul class="d-flex d-none d-xl-flex">
+                <li>
+                  <a href="#" class="sale-badge">Flash Sale</a>
+                </li>
+                <li>
+                  <a href="#">New Arrivals</a>
+                </li>
+                <li>
+                  <a href="#">Puja Offer</a>
+                </li>
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="header-area desktop d-none d-md-block">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 col-lg-4">
-            <div class="header-nav">
-              <nav class="navbar navbar-expand-md">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="shop.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Products
-                        </a>
-                        <ul class="dropdown-menu p-0">
-                          <li><a class="dropdown-item" href="#">Dog Treats</a></li>
-                          <li><a class="dropdown-item" href="#">Cat Treats</a></li>
-                          <li><a class="dropdown-item" href="#">Dog Foods</a></li>
-                          <li><a class="dropdown-item" href="#">Cat Foods</a></li>
-                          <li><a class="dropdown-item" href="#">Grooming</a></li>
-                          <li><a class="dropdown-item" href="#">Dog Toys</a></li>
+          <div class="col-4 d-md-none">
+            <a class="mobile-nav-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              <i class="fa-solid fa-align-right"></i>
+            </a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="#" aria-current="page" class="nav-link">Home</a>
+                  </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My account</a>
+                        <ul class="sub-menu dropdown-menu shadow">
+                          <li>
+                            <a href="#" class="dropdown-item">Track Order</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">Orders</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">Account details</a>
+                          </li>
+                          <link>
+                            <a href="#" class="dropdown-item">Lost password</a>
+                          </link>
                         </ul>
                       </li>
-                      <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact Us</a>
-                      </li>
-                    </ul>
-                  </div>
-              </nav>
-            </div>
-          </div>
-          <div class="col-md-2 col-lg-4 position-relative">
-            <div class="header-logo text-center">
-              <img src="images/logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="header-right d-flex">
-              <div class="form-area">
-                <form>
-                  <input type="email" placeholder="Search...">
-                  <button type="submit" class="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-              </div>
-              <div class="cart-area position-relative">
-                <ul class="d-flex">
-                  <li>
-                    <a href="#"><i class="fa-regular fa-user"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-                  </li>
-                </ul>
-                <span id="count">0</span>
-              </div>
+                    </ul>                  
+                </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="header-area mobile-header d-md-none">
+    <!--Header area-->
+    <!--Banner area-->
+    <section class="banner-area mt-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-9" data-aos="fade-up">
+              <div class="swiper banner-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide d-md-flex">
+                    <div class="slider-box">
+                      <h5>From $199</h5>
+                      <h1>Graceful & Eye-Catching Necklaces</h1>
+                      <p>
+                        Enhance your beauty with dazzling earrings. Whether classic studs, elegant hoops, or statement designs, our collection offers the perfect sparkle for every style and occasion.
+                      </p>
+                      <button class="common-btn">Shop Now <span><i class="fa-solid fa-arrow-right-long"></i></span></button>
+                      <button class="common-btn">All Products <span><i class="fa-solid fa-arrow-trend-up"></i></span></button>
+                    </div>
+                    <div class="slider-pic d-none d-md-block">
+                      <img src="images/neck.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide d-md-flex">
+                    <div class="slider-box">
+                      <h5>From $199</h5>
+                      <h1>Graceful & Eye-Catching Necklaces</h1>
+                      <p>
+                        Enhance your beauty with dazzling earrings. Whether classic studs, elegant hoops, or statement designs, our collection offers the perfect sparkle for every style and occasion.
+                      </p>
+                      <button class="common-btn">Shop Now <span><i class="fa-solid fa-arrow-right-long"></i></span></button>
+                      <button class="common-btn">All Products <span><i class="fa-solid fa-arrow-trend-up"></i></span></button>
+                    </div>
+                    <div class="slider-pic d-none d-md-block">
+                      <img src="images/neck.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-3" data-aos="fade-up">
+              <div class="side-banner d-flex">
+                <div class="side-banner-box">
+                  <h4>30% OFF</h4>
+                  <button class="common-btn mt-5">Shop Now <span><i class="fa-solid fa-arrow-right-long"></i></span></button>
+                </div>
+                <div class="side-banner-box side-banner-box1">
+                  <h4>30% OFF</h4>
+                  <button class="common-btn mt-5">Shop Now <span><i class="fa-solid fa-arrow-right-long"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--Banner area-->
+    <!--Text animaton area-->
+    <section class="text-animated-area p-50" data-aos="fade-in">
+      <div class="container">
+        <h4><span><b>10% discount</b> Above Order on 599</span>
+        <span><b>10% discount</b> coupon code ZYRA10</span>
+        <span><b>10% discount</b> Above Order on 599</span>
+        <span><b>10% discount</b> coupon code ZYRA10</span>
+        <span><b>10% discount</b> Above Order on 599</span>
+      </h4>
+      </div>
+    </section>
+    <!--Text animaton area-->
+    <!--Popular area-->
+    <section class="popular-area" data-aos="fade-up">
+      <div class="container">
+        <div class="title-area">
+          <ul class="d-flex align-items-center">
+            <li>
+              <h3>Popular Products</h3>
+            </li>
+            <li>
+              <a href="#">View More <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper popular-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro1.png" alt="" class="main-pic">
+                <img src="images/pro2.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro2.png" alt="" class="main-pic">
+                <img src="images/pro1.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro3.png" alt="" class="main-pic">
+                <img src="images/pro2.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro4.png" alt="" class="main-pic">
+                <img src="images/pro3.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro5.png" alt="" class="main-pic">
+                <img src="images/pro4.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro7.jpg" alt="" class="main-pic">
+                <img src="images/pro8.jpg" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro8.jpg" alt="" class="main-pic">
+                <img src="images/pro7.jpg" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/po10.png" alt="" class="main-pic">
+                <img src="images/pro1.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--Popular area-->
+    <!--Offer area-->
+    <section class="offer-area p-50">
+      <div class="container">
+        <div class="offer-box">
+          <ul class="d-md-flex offer-top" data-aos="fade-up">
+            <li>
+              <p>Trend Products</p>
+            </li>
+            <li>
+              <p>Extra 10% Off - Limited Time Only!</p>
+            </li>
+        </ul>
+        <h4 data-aos="fade-up">New Models, New Excitement!</h4>
+        <ul class="d-flex offer-collection" data-aos="fade-up">
+          <li><p><span><i class="fa-solid fa-check"></i></span> Braclets</p></li>
+          <li><p><span><i class="fa-solid fa-check"></i></span> Braclets</p></li>
+          <li><p><span><i class="fa-solid fa-check"></i></span> Braclets</p></li>
+          <li><p><span><i class="fa-solid fa-check"></i></span> Braclets</p></li>
+        </ul>
+        <button class="common-btn">Shop Now</button>
+        </div>
+      </div>
+    </section>
+    <!--Offer area-->
+    <!--Category area-->
+    <section class="category-area" data-aos="fade-up">
+      <div class="container">
+        <div class="title-area">
+          <ul class="d-flex align-items-center">
+            <li>
+              <h3 data-aos="fade-up">Product Categories</h3>
+            </li>
+            <li>
+              <a href="#" data-aos="fade-up">View More <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper category-swiper" data-aos="fade-in">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat1.png" alt="">
+                <a href="#" class="position-absolute">Pearls</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat2.png" alt="">
+                <a href="#" class="position-absolute">Pearls</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat3.png" alt="">
+                <a href="#" class="position-absolute">Ear rings</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat4.png" alt="">
+                <a href="#" class="position-absolute">Necklaces</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat5.png" alt="">
+                <a href="#" class="position-absolute">Pendents</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat6.png" alt="">
+                <a href="#" class="position-absolute">Oxidised Jhumka</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat7.jpg" alt="">
+                <a href="#" class="position-absolute">Sitahar</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-box position-relative">
+                <img src="images/cat8.png" alt="">
+                <a href="#" class="position-absolute">Chokker</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--Category area-->
+    <!--Best Seller area-->
+    <section class="best-seller-area p-50">
       <div class="container">
         <div class="row">
-          <div class="col-4">
-            <div class="header-logo text-center">
-              <img src="images/logo.png" alt="">
+          <div class="col-md-3">
+            <div class="best-seller-left position-relative" data-aos="fade-up">
+              <div class="best-seller-content position-absolute">
+                <h2>shine with stunning ear rings</h2>
+                <p>Enhance your beauty with dazzling earrings.</p>
+                <button class="common-btn">View Now</button>
+              </div>
+              <img src="images/best-selling-bg.png" alt="">
             </div>
           </div>
-          <div class="col-8">
-            <div class="header-right d-flex">
-              <div class="cart-area position-relative">
-                <ul class="d-flex">
-                  <li>
-                    <a href="#"><i class="fa-regular fa-user"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-                  </li>
-                </ul>
-                <span id="count">0</span>
-              </div>
-              <div class="offcanvas-menu">
-                  <button class="nav-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <i class="fa-solid fa-bars"></i>
-                  </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                      <img src="images/logo.png" alt="">
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <div class="col-md-9">
+            <div class="best-seller-right" data-aos="fade-up">
+              <div class="row gy-4">
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro1.png" alt="" class="main-pic">
+                      <img src="images/pro2.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
                   </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a href="shop.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                          Products
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Dog Treats</a></li>
-                          <li><a class="dropdown-item" href="#">Cat Treats</a></li>
-                          <li><a class="dropdown-item" href="#">Dog Foods</a></li>
-                          <li><a class="dropdown-item" href="#">Cat Foods</a></li>
-                          <li><a class="dropdown-item" href="#">Grooming</a></li>
-                          <li><a class="dropdown-item" href="#">Dog Toys</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact Us</a>
-                      </li>
-                    </ul>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro2.png" alt="" class="main-pic">
+                      <img src="images/pro3.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro3.png" alt="" class="main-pic">
+                      <img src="images/pro4.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro5.png" alt="" class="main-pic">
+                      <img src="images/pro4.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro7.jpg" alt="" class="main-pic">
+                      <img src="images/pro2.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro8.jpg" alt="" class="main-pic">
+                      <img src="images/pro2.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro1.png" alt="" class="main-pic">
+                      <img src="images/pro2.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3">
+                  <div class="swiper-slide">
+                    <div class="slider-pic position-relative">
+                      <img src="images/pro2.png" alt="" class="main-pic">
+                      <img src="images/pro3.png" alt="" class="gallery-pic">
+                      <span id="sale-badge" class="position-absolute">10% OFF</span>
+                      <div class="cart-btn">
+                        <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                      </div>
+                    </div>
+                    <div class="slider-box">
+                      <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                      <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                      <span class="star-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </span>
+                      <h5>in stock</h5>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -207,2416 +839,348 @@
         </div>
       </div>
     </section>
-    <!--header area-->
-    <section class="banner-area position-relative">
-      <div class="banner_slider p-0">
-        <div class="slider position-relative">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-6 order-2 order-md-1">
-                  <div class="banner-content">
-                    <h1 data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                      Healthy Pets Happy Client
-                    </h1>
-                    <p data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                      We are your local dog home boarding service giving you complete
-                    </p>
-                    <button type="button" class="common_btn btn" onclick="window.location.href='contact.html'">Shop Now <span><img src="images/btn-icon.png" alt=""></span></button>
-                  </div>
-              </div>
-              <div class="col-md-6 order-1 order-md-2">
-                <div class="banner-pic position-relative">
-                  <img src="images/cat.png" alt="">
-                  <img src="images/banner-shape.png" class="shape-pic" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
+    <!--Best Seller area-->
+    <!--Popular area-->
+    <section class="popular-area" data-aos="fade-up">
+      <div class="container">
+        <div class="title-area">
+          <ul class="d-flex align-items-center">
+            <li>
+              <h3>Customer's Choice</h3>
+            </li>
+            <li>
+              <a href="#">View More <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
+            </li>
+          </ul>
         </div>
-        <div class="slider position-relative">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-6 order-2 order-md-1">
-                  <div class="banner-content">
-                    <h1 data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                      Take a good care of your pet
-                    </h1>
-                    <p data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                      We are your local dog home boarding service giving you complete
-                    </p>
-                    <button type="button" class="common_btn btn" onclick="window.location.href='contact.html'">Shop Now <span><img src="images/btn-icon.png" alt=""></span></button>
-                  </div>
-              </div>
-              <div class="col-md-6 order-1 order-md-2">
-                <div class="banner-pic position-relative">
-                  <img src="images/slider-1.png" alt="">
-                  <img src="images/banner-shape.png" class="shape-pic" alt="">
+        <div class="swiper popular-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro1.png" alt="" class="main-pic">
+                <img src="images/pro2.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro2.png" alt="" class="main-pic">
+                <img src="images/pro1.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro3.png" alt="" class="main-pic">
+                <img src="images/pro2.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro4.png" alt="" class="main-pic">
+                <img src="images/pro3.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro5.png" alt="" class="main-pic">
+                <img src="images/pro4.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro7.jpg" alt="" class="main-pic">
+                <img src="images/pro8.jpg" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/pro8.jpg" alt="" class="main-pic">
+                <img src="images/pro7.jpg" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-pic position-relative">
+                <img src="images/po10.png" alt="" class="main-pic">
+                <img src="images/pro1.png" alt="" class="gallery-pic">
+                <span id="sale-badge" class="position-absolute">10% OFF</span>
+                <div class="cart-btn">
+                  
+                  <a class="shop-btn" href="3" tabindex="-1"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+              </div>
+              <div class="slider-box">
+                <h3 class="poduct-title">22 Carat Butterfly Earrings</h3>
+                <h4><span class="regular-price">$54.99</span> <span class="sale-price">$5.99</span></h4>
+                <span class="star-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <h5>in stock</h5>
               </div>
             </div>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
-    <section class="shipping-area p-70" data-aos="fade-up">
+    <!--Popular area-->
+    <!--Sign up area-->
+    <section class="signup-area p-50">
+      <div class="container">
+        <div class="signup-box d-lg-flex">
+          <div class="signup-left">
+              <h3>Sign Up For Newsletter</h3>
+              <p class="mt-2">Get e-mail updates about our latest stock and special offers.</p>
+            </div>
+            <div class="signup-right mt-5 mt-lg-0">
+              <form action="">
+                <input type="email" placeholder="Enter Your Emial ID...">
+                <button type="button" class="common-btn">Subscribe</button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!--Sign up area-->
+    <!--Footer area-->
+    <section class="footer-area p-50">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left">
-            <div class="shipping-box">
-              <ul class="d-flex">
-                <li class="shipping-icon">
-                   <i class="fa-solid fa-truck-fast"></i>
-                </li>
-                <li class="shipping-content">
-                  <h3>Free Shipping</h3>
-                  <p>
-                    Applicable for Burdwan orders above ₹68.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4" data-aos="flip-up">
-            <div class="shipping-box shipping-box1">
-              <ul class="d-flex">
-                <li class="shipping-icon">
-                   <i class="fa-solid fa-truck-fast"></i>
-                </li>
-                <li class="shipping-content">
-                  <h3>Customer Services</h3>
-                  <p>
-                    We are available from Monday to Saturday to answer your questions
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-4" data-aos="flip-right">
-            <div class="shipping-box shipping-box2">
-              <ul class="d-flex">
-                <li class="shipping-icon">
-                   <i class="fa-solid fa-truck-fast"></i>
-                </li>
-                <li class="shipping-content">
-                  <h3>Our Guarantee</h3>
-                  <p>
-                    Earn points for every purchase to use for next order.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="best-seller-area" data-aos="fade-up">
-      <div class="container">
-        <div class="title-box">
-          <h3><span><img src="images/title-icon.png" alt=""></span> Best Seller Products</h3>
-        </div>
-        <div class="best-seller-slider p-0">
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-1.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Cat beds for Indoor...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-2.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-3.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Natural dry cat  food..</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-4.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Benebone Large...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-5.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Cat beds for Indoor...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-6.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Cat Treats for Picky...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="product-box">
-              <div class="product-pic position-relative">
-                <img src="images/pro-1.png" alt="">
-                <span class="position-absolute">20% OFF</span>
-                      <div class="add-cart-btn">
-                        <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                      </div>
-              </div>
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <h3 class="pro-title text-truncate">Cat beds for Indoor...</h3>
-              <p>₹1500 <span>₹1999</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="deals-area p-70" data-aos="fade-up">
-      <div class="container">
-        <div class="title-box">
-          <h3><span><img src="images/title-icon.png" alt=""></span> Everyday Low Prices</h3>
-        </div>
-        <div class="row">
-          <div class="col-6 col-md-6 col-lg-3" data-aos="flip-left">
-            <div class="deal-box">
-              <div class="deal-content">
-                <p>Under Price</p>
-                <h4>₹149.99</h4>
-                <h5>Dog & Cat Food Bags</h5>
-                <p>Yummy, balanced nutrition.</p>
-              </div>
-              <div class="deal-pic position-relative">
-                <img src="images/deal1.png" alt="">
-                <img src="images/deal-shape.png" alt="" class="deal-shape position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3" data-aos="flip-left">
-            <div class="deal-box deal-box1">
-              <div class="deal-content">
-                <p>Only Price</p>
-                <h4>₹9.99</h4>
-                <h5>Dog & Cat Toys</h5>
-                <p>Get all the best pet toys beds.</p>
-              </div>
-              <div class="deal-pic position-relative">
-                <img src="images/deal2.png" alt="">
-                <img src="images/deal-shape.png" alt="" class="deal-shape position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3" data-aos="flip-left">
-            <div class="deal-box deal-box2">
-              <div class="deal-content">
-                <p>Under Price</p>
-                <h4>₹49.99</h4>
-                <h5>Flea & Tick Solutions</h5>
-                <p>Simple Solutions to solving</p>
-              </div>
-              <div class="deal-pic position-relative">
-                <img src="images/deal3.png" alt="">
-                <img src="images/deal-shape.png" alt="" class="deal-shape position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3" data-aos="flip-left">
-            <div class="deal-box deal-box3">
-              <div class="deal-content">
-                <p>Starting At</p>
-                <h4>₹2.99</h4>
-                <h5>Probiotics & Digestion</h5>
-                <p>An advanced formula of probiotics.</p>
-              </div>
-              <div class="deal-pic position-relative">
-                <img src="images/deal4.png" alt="">
-                <img src="images/deal-shape.png" alt="" class="deal-shape position-absolute">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <secton class="category-area" data-aos="fade-up">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6">
-            <div class="title-box">
-              <h3 class="mb-0"><span><img src="images/title-icon.png" alt=""></span> Collecton For Puppies</h3>
-            </div>
-          </div>
-          <div class="col-6">
-            <button type="button" class="common_btn btn" onclick="window.location.href='contact.html'">View More <span><img src="images/btn-icon.png" alt=""></span></button>
-          </div>
-        </div>
-        <div class="row row-gap">
-          <div class="col-md-4 col-lg-3">
-            <div class="category-left">
-              <ul class="tabs">
-                <li class="tab-link current" data-tab="dog-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dog Treats</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Treats</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dog Foods</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Foods</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Grooming</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dog Toys</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Toys</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Carriers</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dog Collars</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Collars</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dog Harness</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Harness</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Leash</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Walk gear</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Comb & Brushes</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Tag & Bells</p>
-                </li>
-                <li class="tab-link" data-tab="cat-treats">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Food & Water Bowls</p>
-                </li>
-                <li class="tab-link" data-tab="dog-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Beds, Mats & Houses</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Cat Litter and Box</p>
-                </li>
-                <li class="tab-link" data-tab="cat-foods">
-                  <p><span><img src="images/cat-icon.png" alt=""></span> Dress</p>
-                </li>
-              </ul>
-              <!-- <ul>
-                <li>
-                  <a href="#" class="active"><span><img src="images/cat-icon.png" alt=""></span> Dog Treats</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Cat Treats</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Dog Foods</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Cat Foods</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Grooming</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Dog Toys</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Cat Toys</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Carries</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Dog Collers</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Cat Collers</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Dog Harness</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> leash</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Walk Gear</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Name Tag</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Bells</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Food & Water Bowls</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Beds, Mats & Houses</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Cat Litter & Box</a>
-                </li>
-                <li>
-                  <a href="#"><span><img src="images/cat-icon.png" alt=""></span> Dress</a>
-                </li>
-              </ul> -->
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-9">
-            <div class="category-right">
-              <div id="dog-treats" class="tab-content current">
-                <div class="row">
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-2.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-1.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-3.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-4.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-1.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-2.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-3.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-4.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="cat-treats" class="tab-content">
-                <div class="row">
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-1.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-2.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-3.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-4.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="dog-foods" class="tab-content">
-                <div class="row">
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-2.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-1.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-3.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-4.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-1.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-2.png" alt="">
-                        <!-- <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div> -->
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-3.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-4.png" alt="">
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-5.png" alt="">
-                        <span class="position-absolute">20% OFF</span>
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-box">
-                      <div class="product-pic position-relative">
-                        <img src="images/pro-6.png" alt="">
-                        <div class="add-cart-btn">
-                          <a href="#" class=" position-absolute"><i class="fa-solid fa-bag-shopping"></i></a>
-                        </div>
-                      </div>
-                      <div class="rating-box">
-                        <ul class="d-flex">
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                          <li>
-                            <span>
-                              <i class="fa-solid fa-star"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                      <h3 class="pro-title text-truncate">Dry dog food small...</h3>
-                      <p>₹1500 <span>₹1999</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </secton>
-    <section class="brand-area p-70" data-aos="fade-up">
-      <div class="container">
-        <div class="title-box">
-          <h3><span><img src="images/title-icon.png" alt=""></span> 50+ Brands Available</h3>
-        </div>
-        <div class="brand-slider p-0">
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand1.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand2.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand3.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand4.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand5.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand6.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand1.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand2.png" alt="">
-            </div>
-          </div>
-          <div class="slider position-relative">
-            <div class="brand-pic">
-              <img src="images/brand3.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="advertise-area" id="advertise-area">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 order-2 order-md-1">
-            <div class="advertise-left">
-              <div class="offer-box" id="offer-box">
-                <div class="countdown-section d-flex">
-                    <div class="countdown-items text-center">
-                        <span id="day" class="number d-flex" style="color: red;"></span>
-                        <span class=" text">Days</span>
-                    </div>
-                    <div class="countdown-items text-center">
-                        <span id="hour" class="number d-flex shadow" style="color: skyblue;"></span>
-                        <span class="text">Hours</span>
-                    </div>
-                    <div class="countdown-items text-center">
-                        <span id="minute" class="number d-flex shadow" style="color: green;"></span>
-                        <span class="text">Minutes</span>
-                    </div>
-                    <div class="countdown-items text-center">
-                        <span id="second" class="number  d-flex shadow" style="color: red;"></span>
-                        <span class="text">Seconds</span>
-                    </div>
-                </div>
-                <h4 data-aos="fade-right" id="countdown-text">Woo! Sale is Live</h4>
-              </div>
-              <h3 data-aos="fade-right">Hottest Savings Has Arrived!</h3>
-              <p data-aos="fade-right">
-                You get into the 2k+ best Products in br Flash offer with as in shaped prodyucts for sale.
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="footer-box footer-logo-area">
+              <img src="images/logo.png" alt="" class="footer-logo">
+              <p class="mt-4">
+                At Zyraluxe, we believe jewellery is more than an accessory - it's an expression of elegance, confidence, and timeless beauty.
               </p>
-              <button type="button" class="common_btn btn" id="grab-deal-btn" onclick="window.location.href='<?php echo site_url();?>/shop'">Shop Now <span><img src="images/btn-icon.png" alt=""></span></button>
-            </div>
-          </div>
-          <div class="col-md-7 order-1 order-md-2">
-            <div class="advertise-right">
-              <img src="images/advertise-pic.png" alt="" id="advertise-pic">
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="images/offer-shape.png" class="offer-pic" alt="">
-    </section>
-    <section class="review-area p-70">
-      <div class="container">
-        <div class="title-box">
-          <h3><span><img src="images/title-icon.png" alt=""></span> Client Review</h3>
-        </div>
-        <div class="review-slider">
-          <div class="slider">
-            <div class="review-box position-relative">
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div class="review-content">
-                <h3>Favorite dry food</h3>
-                <p>
-                  Our cats love these, and you get quite a few in a bag, so it's a good value, as well. Most times, if offered one of these or some ...
-                </p>
-                <h4 class="author-name"><span><img src="images/cat-icon.png" alt=""></span> Thomas Brassington</h4>
-              </div>
-              <div class="review-pic d-none d-md-block">
-                <img src="images/review2.png" alt="" class="position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="slider">
-            <div class="review-box position-relative">
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div class="review-content">
-                <h3>Favorite dry food</h3>
-                <p>
-                  Our cats love these, and you get quite a few in a bag, so it's a good value, as well. Most times, if offered one of these or some ...
-                </p>
-                <h4 class="author-name"><span><img src="images/cat-icon.png" alt=""></span> Thomas Brassington</h4>
-              </div>
-              <div class="review-pic d-none d-md-block">
-                <img src="images/review1.png" alt="" class="position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="slider">
-            <div class="review-box position-relative">
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div class="review-content">
-                <h3>Favorite dry food</h3>
-                <p>
-                  Our cats love these, and you get quite a few in a bag, so it's a good value, as well. Most times, if offered one of these or some ...
-                </p>
-                <h4 class="author-name"><span><img src="images/cat-icon.png" alt=""></span> Thomas Brassington</h4>
-              </div>
-              <div class="review-pic d-none d-md-block">
-                <img src="images/review2.png" alt="" class="position-absolute">
-              </div>
-            </div>
-          </div>
-          <div class="slider">
-            <div class="review-box position-relative">
-              <div class="rating-box">
-                <ul class="d-flex">
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div class="review-content">
-                <h3>Favorite dry food</h3>
-                <p>
-                  Our cats love these, and you get quite a few in a bag, so it's a good value, as well. Most times, if offered one of these or some ...
-                </p>
-                <h4 class="author-name"><span><img src="images/cat-icon.png" alt=""></span> Thomas Brassington</h4>
-              </div>
-              <div class="review-pic d-none d-md-block">
-                <img src="images/review1.png" alt="" class="position-absolute">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="footer-left">
-              <img src="images/logo.png" alt="" class="logo">
-              <p class="desc">
-                The best overall dog DNA test Embark Breed & Health Kit (view at Chewy) which provides overall dog you.
-              </p>
-              <p class="desc"><b>Address:</b> Ghordourchati, Burdwan, 713103</p>
-              <ul class="d-flex">
+              <ul class="d-flex mt-4">
                 <li>
-                  <p>Folow us on:</p>
+                  <h3>Follow Us On :</h3>
                 </li>
                 <li>
-                  <ul class="d-flex social-icons">
-                    <li>
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </li>
-                  </ul>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-regular fa-user"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="footer-menu quick-links">
-              <h3 class="title-bar"><span><img src="images/pawprint-icon.png" alt=""></span> Quick Links</h3>
-              <ul>
-                <li>
-                  <a href="#"><span>-<span> Privacy & Policy</a>
-                </li>
-                <li>
-                  <a href="#"><span>-<span> Terms & Conditions</a>
-                </li>
-                <li>
-                  <a href="#"><span>-<span> Shop</a>
-                </li>
-                <li>
-                  <a href="#"><span>-<span> My Account</a>
-                </li>
-                <li>
-                  <a href="#"><span>-<span> Home</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-md-2">
+          <div class="col-6 col-md-3 col-xl-3">
             <div class="footer-menu">
-              <h3 class="title-bar"><span><img src="images/pawprint-icon.png" alt=""></span> Help Desk</h3>
+              <h3 class="mb-4">More Info</h3>
               <ul>
                 <li>
-                  <a href="#"><span>-<span> My Account</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#"><span>-<span> Track Order</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#"><span>-<span> Login</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#"><span>-<span> Register</a>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-md-3 d-none d-md-block">
-            <div class="footer-gallery">
-              <h3 class="title-bar"><span><img src="images/pawprint-icon.png" alt=""></span> Gallery</h3>
-              <div class="gallery-box">
-                <div class="row">
-                  <div class="col-4">
-                    <a href="images/gallery-1.png" data-fancybox="mygallery">
-                      <img src="images/gallery-1.png" alt="menu-1">
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a href="images/gallery-2.png" data-fancybox="mygallery">
-                      <img src="images/gallery-2.png" alt="menu-1">
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a href="images/gallery-3.png" data-fancybox="mygallery">
-                      <img src="images/gallery-3.png" alt="menu-1">
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a href="images/gallery-4.png" data-fancybox="mygallery">
-                      <img src="images/gallery-4.png" alt="menu-1">
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a href="images/gallery-5.png" data-fancybox="mygallery">
-                      <img src="images/gallery-5.png" alt="menu-1">
-                    </a>
-                  </div>
-                  <div class="col-4">
-                    <a href="images/gallery-6.png" data-fancybox="mygallery">
-                      <img src="images/gallery-6.png" alt="menu-1">
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div class="col-6 col-md-3 col-xl-3">
+            <div class="footer-menu">
+              <h3 class="mb-4">quick Menu</h3>
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-6 order-2 order-md-1">
-            <div class="copyright-txt">
-              <p>©2025 Pawcrush. All Rights Reserved.</p>
-            </div>
-          </div>
-          <div class="col-md-6 order-1 order-md-2">
-            <div class="payment-area">
-              <img src="images/payment-pic.png" alt="">
+          <div class="col-12 col-md-12 col-xl-3">
+            <div class="footer-menu gallery-menu">
+              <h3 class="mb-4">Gallery</h3>
+              <ul>
+                <li>
+                  <a href="images/cat6.png" data-fancybox="mygallery">
+                    <img src="images/cat6.png" alt="menu-1">
+                  </a>
+                </li>
+                <li>
+                  <a href="images/cat5.png" data-fancybox="mygallery">
+                    <img src="images/cat5.png" alt="menu-1">
+                  </a>
+                </li>
+                <li>
+                  <a href="images/cat4.png" data-fancybox="mygallery">
+                    <img src="images/cat4.png" alt="menu-1">
+                  </a>
+                </li>
+                <li>
+                  <a href="images/cat3.png" data-fancybox="mygallery">
+                    <img src="images/cat3.png" alt="menu-1">
+                  </a>
+                </li>
+                <li>
+                  <a href="images/cat2.png" data-fancybox="mygallery">
+                    <img src="images/cat2.png" alt="menu-1">
+                  </a>
+                </li>
+                <li>
+                  <a href="images/cat1.png" data-fancybox="mygallery">
+                    <img src="images/cat1.png" alt="menu-1">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
+
+
+
+
+
 
     <!--Preloader-->
     <div class="preloader"> 
@@ -2635,7 +1199,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <!--Bootstrap JS-->
     <!--Slick JS-->
-    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--Slick JS-->
 
     <!--custom JS-->
