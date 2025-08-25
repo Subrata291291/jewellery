@@ -1004,6 +1004,11 @@ button {
         background: linear-gradient(90deg, $bg-primary 0%, $bg-primary 58%, $bg-primary 100%);
         border-right: transparent !important;
     }
+    .offcanvas-title {
+        img {
+            filter: brightness(1) invert(1);
+        }
+    }
     .btn-close {
         filter: brightness() invert(1);
     }
@@ -1018,7 +1023,7 @@ button {
                 border-bottom: 1px solid #000;
                 padding: 0.5rem 0rem;
                 a {
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     padding: 1rem;
                 }
             }
@@ -1155,6 +1160,7 @@ button {
         }
     }
     .footer-area {
+        padding: 3rem 0rem 2rem;
         .footer-logo-area {
             text-align: center;
             ul {
@@ -1166,6 +1172,8 @@ button {
             margin: 2rem 0rem;
         }
         .copyright-area {
+            margin-top: 1rem;
+            padding-top: 2rem;
             .copyright-left {
                 text-align: center;
             }

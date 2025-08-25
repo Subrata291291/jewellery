@@ -157,10 +157,12 @@ $(document).ready(function() {
 // Shrink header 
   $(document).ready(function() {
     $(window).scroll(function() {
-      if ($(document).scrollTop() > 270) {
-        $(".header-area").addClass("shrink shadow")
+      if ($(document).scrollTop() > 230) {
+        $(".header-area").addClass("shrink shadow");
+        $(".mb-none").hide();
       } else {
-        $(".header-area").removeClass("shrink shadow")
+        $(".header-area").removeClass("shrink shadow");
+        $(".mb-none").show();
       }
     });
   });

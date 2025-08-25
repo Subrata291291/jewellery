@@ -1012,6 +1012,9 @@ button {
     background: linear-gradient(90deg, #181818 0%, #181818 58%, #181818 100%);
     border-right: transparent !important;
   }
+  .offcanvas-title img {
+    filter: brightness(1) invert(1);
+  }
   .btn-close {
     filter: brightness() invert(1);
   }
@@ -1025,7 +1028,7 @@ button {
     padding: 0.5rem 0rem;
   }
   .offcanvas-body ul li a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 1rem;
   }
   .offcanvas-body .dropdown-menu {
@@ -1108,6 +1111,9 @@ button {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
+  .footer-area {
+    padding: 3rem 0rem 2rem;
+  }
   .footer-area .footer-logo-area {
     text-align: center;
   }
@@ -1117,6 +1123,10 @@ button {
   }
   .footer-area .footer-menu {
     margin: 2rem 0rem;
+  }
+  .footer-area .copyright-area {
+    margin-top: 1rem;
+    padding-top: 2rem;
   }
   .footer-area .copyright-area .copyright-left {
     text-align: center;
