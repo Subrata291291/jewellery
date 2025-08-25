@@ -1109,4 +1109,11 @@ button {
   .footer-area .footer-menu {
     margin: 2rem 0rem;
   }
+  .footer-area .copyright-area .copyright-left {
+    text-align: center;
+  }
+  .footer-area .copyright-area .copyright-right {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=main.css.map */
