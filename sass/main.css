@@ -737,6 +737,7 @@ button {
 .footer-area {
   background-image: url(../images/footer-bg.jpg);
   position: relative;
+  padding: 7rem 0rem 2rem;
   z-index: 1;
   background-position: center;
   background-size: cover;
@@ -827,6 +828,14 @@ button {
 .footer-area .gallery-menu ul li a img {
   max-width: 10rem;
   border: 1px solid #D4AF37;
+}
+.footer-area .copyright-area {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid;
+}
+.footer-area .copyright-area .copyright-right {
+  text-align: right;
 }
 
 @media (min-width: 1700px) {
