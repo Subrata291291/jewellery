@@ -13,7 +13,7 @@
   -webkit-transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.86, 0, 0.09, 1);
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.09, 1);
-  background-color: #fa441d;
+  background-color: #212121;
 }
 .page-loaded .preloader {
   /* top: -100%; */
